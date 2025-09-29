@@ -1,5 +1,13 @@
 @import url("variables.css");
 
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100vh;
+}
+
 main {
     margin-top: 12vh;
     display: flex;
@@ -76,4 +84,8 @@ main {
 
 .foot div {
     position: static;
+}
+
+@media (orientation: portrait) {
+
 }

@@ -1,6 +1,12 @@
 @import url("fonts.css");
 @import url("variables.css");
 
+html{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
 .timeline-container {
     position: absolute;
     height: 100%;

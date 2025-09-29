@@ -8,6 +8,7 @@
 .history-grid {
     display: grid;
     height: auto;
+    width: 100%;
     grid-template: 12vh auto / 8% 1% 14% 38.5% 38.5%;
     grid-template-areas: 
     "left timeline right . ."
@@ -133,35 +134,43 @@
 @media (orientation: portrait) {
 
     .history-grid {
-    grid-template: 12vh auto / 8% 1% 14% 77%;
+    margin-top: 12vh;
+    grid-template: auto / auto ;
     grid-template-areas: 
-    "left timeline right . ."
-    "left timeline right history"
-    "left timeline right history"
-    "left timeline right history"
-    "left timeline right history"
-    "left timeline right history"
-    "left timeline right history"
-    "left timeline right history"
-    "left timeline right history"
-    "left timeline right history"
-    "left timeline right history"
-    "left timeline right history"
-    "left timeline right history"
-    "left timeline right history"
-    "left timeline right history"
-    "left timeline right history"
-    "left timeline right history"
-    "left timeline right history"
-    "left timeline right history"
-    "left timeline right history"
-    "left timeline right history"
-    "left timeline right history"
-    "left timeline right history"
-    "left timeline right history"
-    "left timeline right history"
-    "left timeline right history"
-    "left timeline right history"
+    'history'
     ;
+    }
+
+    .history-text{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .time-tick{
+        display: none;
+    }
+
+    .section1 {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.251);
+    }
+
+    .section2 {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.251);
+    }
+
+    .timeline {
+        display: none;
+    }
+
+    .image-section {
+        width: 100%;
+    }
+
+    .image {
+        width: 100%;
     }
 }

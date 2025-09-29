@@ -1,0 +1,353 @@
+@import url("fonts.css");
+@import url("variables.css");
+
+.timeline-container {
+    position: absolute;
+    height: 100%;
+    width: fit-content;
+    min-width: 2000px;
+    top: 0;
+}
+
+.timeline-buttons{
+    width: 100%;
+    top: 12vh;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button {
+    width: fit-content;
+    height: fit-content;
+    padding: 7px 15px;
+    color: rgba(255, 255, 255, 0.121);
+    font-family: var(--normal-font);
+    font-size: clamp(10px, 1.4vw, 32px);
+    border-radius: 17px;
+    border: rgba(255, 255, 255, 0.037) solid 1px;
+    background-color: transparent;
+    transition: all .6s;
+    margin: 2vw;
+}
+
+.button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(34, 34, 34);
+    cursor: pointer;
+}
+
+.button:hover .arrow {
+    color: rgb(255, 98, 0);
+}
+
+.arrow {
+    color: rgba(255, 255, 255, 0.121);
+    transition: all .6s;
+}
+
+.skip:active .main-grid {
+    opacity: 0;
+}
+
+.main-grid {
+    z-index: 3;
+    position: relative;
+    padding-top: 30px;
+    height: 100%;
+    width: 250vw;
+    min-width: 2000px;
+    margin: 10 0;
+    display: grid;
+    grid-template: 20fr 1fr 20fr / 1.2fr 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    " . top1 top1 top1 top2 top2 top3 top3 top4 top4 top5 top5 top6 top6 top7 top7 top7"
+    " timeline timeline timeline timeline timeline timeline timeline timeline timeline timeline timeline timeline timeline timeline timeline timeline timeline"
+    " . . . bottom1 bottom1 bottom2 bottom2 bottom3 bottom3 bottom4 bottom4 bottom5 bottom5 bottom6 bottom6 bottom6 ."
+    ;
+    animation: table-moves 80s linear forwards;
+}
+
+.timeline {
+    background-color: rgb(255, 255, 255);
+    grid-area: timeline;
+    border: 1px solid rgb(34, 34, 34);
+    z-index: 4;
+}
+
+.event {
+    margin: 6px;
+    display: flex;
+    font-family: var(--header-font);
+    font-size: clamp(15px, 1.7vw, 50px);
+    color: rgb(255, 255, 255);
+    transition: all .9s ease-in-out;
+    border-radius: 15px;
+}
+
+.event div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.event-top {
+    flex-direction: column-reverse;
+    padding: 0px 12px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+}
+
+.event-bottom {
+    flex-direction: column;
+    padding: 0px 12px;
+    padding-bottom: 8px;
+    padding-top: 5px;
+}
+
+.date {
+    font-family: var(--header-font);
+    font-size: clamp(16px, 2vw, 60px);
+    color: white;
+    font-weight: 700;
+    transition: .6s;
+}
+
+.read-more {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    opacity: 0;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-decoration-color: white;
+    transition-property: font-size, opacity, underline;
+    transition-duration: .3s, .5s, 5s;
+    transition-delay: 0s, .3s, 0s;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+
+.more-arrow {
+    color: rgb(255, 98, 0);
+    font-size: 0;
+    opacity: 0;
+    transition-property: font-size, opacity;
+    transition-duration: .3s, .5s;
+    transition-delay: 0s, .3s;
+}
+
+.event-description {
+    display: block;
+    opacity: 0;
+    font-family: var(--normal-font);
+    font-size: 0rem;
+    color: rgb(255, 255, 255);
+    transition-property: font-size, opacity;
+    transition-duration: .3s, .5s;
+    transition-delay: 0s, .3s;
+    margin: 8px 0px;
+}
+
+.top-marker {
+    width: 6px;
+    height: 22px;
+    position: relative;
+    bottom: -7px;
+    z-index: 5;
+    background-color: rgb(255, 98, 0);
+    border-radius: 12px;
+}
+
+.bottom-marker {
+    width: 6px;
+    height: 22px;
+    position: relative;
+    top: -7px;
+    left: 10px;
+    z-index: 5;
+    background-color: rgb(255, 98, 0);
+    border-radius: 12px;
+}
+
+.event:hover .date {
+    color: rgb(255, 98, 0);
+}
+
+.event:hover .read-more {
+    font-size: clamp(12px, 1.4vw, 42px);
+    opacity: 1;
+}
+
+.event:hover .more-arrow {
+    font-size: clamp(12px, 1.4vw, 42px);
+    opacity: 1;
+}
+
+.event:hover .event-description {
+    opacity: 9;
+    font-size: clamp(12px, 1.4vw, 42px);
+}
+
+.event:hover {
+    border: solid rgba(255, 255, 255, 0.286) 2px;
+    border-radius: 15px;
+    background-color: rgba(34, 34, 34, 0.826);
+}
+
+.area {
+    background-color: rgb(34, 34, 34);
+}
+
+
+.top {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.top1 {
+    grid-area: top1;
+    max-width: 45vw;
+    min-width: 28vw;
+}
+
+.bottom1 {
+    grid-area: bottom1;
+}
+
+.top2 {
+    grid-area: top2;
+}
+
+.bottom2 {
+    grid-area: bottom2;
+}
+
+.top3 {
+    grid-area: top3;
+}
+
+.bottom3 {
+    grid-area: bottom3;
+}
+
+.top4 {
+    grid-area: top4;
+}
+
+.bottom4 {
+    grid-area: bottom4;
+}
+
+.top5 {
+    grid-area: top5;
+}
+
+.bottom5 {
+    grid-area: bottom5;
+}
+
+.top6 {
+    grid-area: top6;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.bottom6 {
+    grid-area: bottom6;
+    width: min-content;
+    min-width: 28vw;
+}
+
+.top7 {
+    grid-area: top7;
+}
+
+.history {
+    z-index: 2;
+    width: fit-content;
+    height: fit-content;
+    padding: 7px 15px;
+    font-family: var(--normal-font);
+    border-radius: 17px;
+    border: rgba(255, 255, 255, 0.472) solid 1px;
+    background-color: rgb(255, 98, 0);
+    font-size: clamp(30px, 2vw, 60px);
+    transition: all .6s;
+    position: relative;
+    bottom: 10vh;
+    left: 30vw;
+    text-decoration: none;
+    color: white;
+    animation: show-page 80s linear, grow-shrink 2s infinite;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+.history:hover {
+    background: white;
+}
+
+.history:hover a {
+    color: rgb(255, 98, 0);
+}
+
+.foot {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    z-index: 9;
+}
+
+.foot div {
+    position: absolute;
+}
+
+@keyframes table-moves {
+    from {
+        transform: translateX(0%);
+    }
+    99% {
+        opacity: 1;
+    }
+    to {
+        transform: translateX(calc(-100% + 100vw));
+    }
+}
+
+@keyframes show-page {
+    0% {
+        opacity: 0;
+    }
+    98% {
+        opacity: 0;
+    }
+    99% {
+        opacity: 1;
+    }
+}
+
+@keyframes grow-shrink {
+    0% {
+        font-size: clamp(30px, 2vw, 60px);
+    }
+    50% {
+        font-size: clamp(38px, 2.3vw, 68px);
+    }
+    100% {
+        font-size: clamp(30px, 2vw, 60px);
+    }
+
+}

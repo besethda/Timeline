@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweden Timeline</title>
+    <link rel="stylesheet" href="Styles/contact.css">
+    <link rel="stylesheet" href="Styles/general.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-body">
+            <a class="page-title" href="main.html"><h1>Sweden's History</h1></a>
+            <nav class="nav-bar">
+                <a href="timeline.html" class="nav-option">Timeline</a>
+                <a href="history-sheet.html" class="nav-option">History</a>
+                <a href="contact.html" class="nav-option nav-option-selected">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="form-area">
+            <h2>Contact Form</h2>
+            <h4>Please share some information with us:</h4>
+            <form action="mailto: someone@gmail.com" method="POST">
+                <div>
+                    <label for="nationality">What country are you from?</label>
+                    <div class="multi-option">
+                        <div class="option">
+                            <input type="radio" value="Sweden" name="nationality" class="radio" outline:none;>
+                            <label>Sweden</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" value="Denmark" name="nationality" class="radio">
+                            <label>Denmark</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" value="Any other country" name="nationality" class="radio">
+                            <label>Any other country</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label for "first">What is your first name? </label>
+                    <input type="text" class="textBox" name="first" outline:none; required>
+                </div>
+                <div>
+                    <label for "last">What is your last name? </label>
+                    <input type="text" class="textBox" name="last" outline:none; required>
+                </div>
+                <div>
+                    <label for "topic">Which topics were interesting to you? </label>
+                    <div class="multi-option">
+                        <div class="option">
+                            <input type="checkbox"  value="Vikings" class="checkBox" name="first" required>
+                            <label>Vikings</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" value="Modern Sweden" class="checkBox" name="first" required>
+                            <label>Modern Sweden</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" value="Wrong Answer" class="checkBox" name="first" required>
+                            <label>Danish History</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" value="Gustav Vasa" class="checkBox" name="first" required>
+                            <label>Gustav Vasa</label>
+                        </div>
+                    </div>
+                </div>
+                <button>Submit</button>
+            </form>
+        </div>
+    </main>
+    <footer class="foot">
+        <div>© Seth Armistead</div>
+    </footer>

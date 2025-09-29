@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "French_canon";
+    src: url("../Fonts/French_Canon/IMFellFrenchCanonSC-Regular.woff2") format("woff2"),
+        url("../Fonts/French_Canon/IMFellFrenchCanonSC-Regular.woff") format("woff"),
+        url("../Fonts/French_Canon/IMFellFrenchCanonSC-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}

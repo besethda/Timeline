@@ -1,0 +1,79 @@
+@import url("variables.css");
+
+main {
+    margin-top: 12vh;
+    display: flex;
+    justify-content: center;
+}
+
+.form-area {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 70%;
+    height: fit-content;
+    font-family: var(--normal-font);
+    font-size: clamp(15px, 1.7vw, 50px);
+    margin-top: 2vh;
+    border-radius: 17px;
+    border: rgba(255, 255, 255, 0.203) solid 1px;
+    padding: 3vw;
+
+    div {
+        margin-bottom: clamp(30px, 4vh, 40px);
+    }
+
+    h2 {
+        font-size: clamp(16px, 1.7vw, 46px);
+        padding: 0;
+        margin: 0;
+    }
+    h4 {
+        font-size: clamp(14px, 1.5vw, 36px);
+    }
+    button {
+        width: 100%;
+        padding: 10px 0px;
+        background-color: rgb(255, 98, 0);
+        color:white;
+        font-size: clamp(15px, 1.7vw, 50px);
+        border: none;
+        border-radius: 20px;
+        transition: all .5s;
+    }
+    button:hover {
+        background-color: white;
+        color:rgb(255, 98, 0);
+        cursor: pointer;
+    }
+}
+
+.textBox {
+    width: clamp(120px, 25%, 500px);
+    font-family: var(--normal-font);
+    font-size: clamp(15px, 1.6vw, 50px);
+    color: white;
+    background: transparent;
+    border: none;
+    border-bottom: rgba(255, 255, 255, 0.203) solid 1px;
+    margin-left: 1vw;
+}
+
+.multi-option {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.foot {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    background: transparent;
+}
+
+.foot div {
+    position: static;
+}

@@ -1,17 +1,15 @@
 @import url("variables.css");
 
-html {
+html, body {
     height: 100vh;
-}
-
-body {
-    height: 100vh;
+    overflow: hidden;
 }
 
 main {
     margin-top: 12vh;
     display: flex;
     justify-content: center;
+    overflow-y: hidden;
 }
 
 .form-area {
@@ -28,23 +26,23 @@ main {
     padding: 3vw;
 
     div {
-        margin-bottom: clamp(30px, 4vh, 40px);
+        margin-bottom: clamp(10px, 3vh, 30px);
     }
 
     h2 {
-        font-size: clamp(16px, 1.7vw, 46px);
+        font-size: clamp(1rem, 1.7vw, 1.7rem);
         padding: 0;
         margin: 0;
+        margin-bottom: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.087)
     }
-    h4 {
-        font-size: clamp(14px, 1.5vw, 36px);
-    }
+
     button {
         width: 100%;
         padding: 10px 0px;
         background-color: rgb(255, 98, 0);
         color:white;
-        font-size: clamp(15px, 1.7vw, 50px);
+        font-size: clamp(.95rem, 1.5vw, 1.8rem);
         border: none;
         border-radius: 20px;
         transition: all .5s;
@@ -71,10 +69,19 @@ main {
     margin-top: 2%;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     align-items: center;
+
+    :hover {
+        transform: scale(1.1);
+        transition: all .8s ease-in-out;
+        cursor: pointer;
+    }
 }
 
 .foot {
+    position: absolute;
+    bottom: 5px;
     width: 100%;
     height: 5vh;
     display: flex;
@@ -87,5 +94,8 @@ main {
 }
 
 @media (orientation: portrait) {
-
+    
+    .form-area {
+        width: 90%;
+    }
 }

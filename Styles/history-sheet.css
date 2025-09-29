@@ -55,7 +55,7 @@
 
 .date {
     font-family: var(--normal-font);
-    font-size: clamp(16px, 2vw, 60px);
+    font-size: clamp(1rem, 2vw, 1.6rem);
     color: white;
     font-weight: 700;
     margin-left: 30px;
@@ -91,6 +91,58 @@
     width: 50%;
 }
 
+.image1 {
+    background-image: url(/Images/helmets.jpeg);
+}
+
+.image2 {
+    background-image: url(/Images/kalmar-flag.jpg);
+}
+
+.image3 {
+    background-image: url(/Images/vasa.jpeg);
+}
+
+.image4 {
+    background-image: url(/Images/raid.jpeg);;
+}
+
+.image5 {
+    background-image: url(/Images/roskilde.jpeg);
+}
+
+.image6 {
+    background-image: url(/Images/kalmar-painting.png);;
+}
+
+.image7 {
+    background-image: url(/Images/runestone.jpeg);
+}
+
+.image8 {
+    background-image: url(/Images/const.jpeg);;
+}
+
+.image9 {
+    background-image: url(/Images/helmets.jpeg);
+}
+
+.image10 {
+    background-image: url(/Images/longboat.jpeg);;
+}
+
+.image11 {
+    background-image: url(/Images/kalmar-flag.jpg);
+}
+
+.image12 {
+    background-image: url(/Images/longboat.jpeg);;
+}
+
+.image13 {
+    background-image: url(/Images/raid.jpeg);;
+}
+
 .image-section div {
     width: 100%;
     height: 100%;
@@ -105,16 +157,18 @@
     width: 50%;
     height: 50%;
     object-fit: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .section-title {
-    font-size: clamp(22px, 1.8vw, 55px);
+    font-size: clamp(1.1rem, 1.8vw, 2.4rem);
     font-family: var(--header-font);
     padding-left: 15px;
 }
 
 .history-area p {
-    font-size: clamp(15px, 1.5vw, 48px);
+    font-size: clamp(.95rem, 1.5vw, 1.8rem);
     padding: 12px;
     line-height: clamp(30px, 4vh, 100px);
 }
@@ -168,6 +222,9 @@
 
     .image-section {
         width: 100%;
+        height: 100vw;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .image {
